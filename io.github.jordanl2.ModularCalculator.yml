@@ -10,7 +10,10 @@ finish-args:
   - --filesystem=xdg-documents
   - --device=dri
 modules:
+
   - pyqt.yml
+
+  - pyyaml.yml
 
   - name: modularcalculator
     sources:
@@ -24,8 +27,9 @@ modules:
   - name: modularcalculatorinterface
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.2.1.tar.gz
-        sha256: fef552c43b14bed4d321d06fea8b2914df3c3ad106e80a038829284b49ddf718
+        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.3.0.tar.gz
+        sha256: 5a8cd7e40062406f202ce6edff5cdb4946c0ccc5e2b8d1b4e329a054d696a1d1
     buildsystem: simple
     build-commands:
+      - sed -i -e "s/native/flatpak/" config/ModularCalculator/version.yml
       - ./install $FLATPAK_DEST
