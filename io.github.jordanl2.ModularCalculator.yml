@@ -27,8 +27,8 @@ modules:
   - name: modularcalculatorinterface
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.4.2.tar.gz
-        sha256: a1d6d005167fc926a6e368e9a54f032f44e88b5e09f6e385b539bf32a36bbae1
+        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.4.3.tar.gz
+        sha256: 55058d43dc55b05f6a1806f67191444f2bfe4916821b5a68894f33351f699ba5
     buildsystem: simple
     build-commands:
       - sed -i -e "s/native/flatpak/" config/ModularCalculator/version.yml
