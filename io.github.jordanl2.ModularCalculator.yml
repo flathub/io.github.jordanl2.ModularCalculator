@@ -1,7 +1,11 @@
 app-id: io.github.jordanl2.ModularCalculator
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: '5.15-22.08'
 sdk: org.kde.Sdk
+base: com.riverbankcomputing.PyQt.BaseApp
+base-version: '5.15-22.08'
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
 command: modularcalculator
 finish-args:
   - --share=ipc
@@ -10,8 +14,6 @@ finish-args:
   - --filesystem=xdg-documents
   - --device=dri
 modules:
-
-  - pyqt.yml
 
   - pyyaml.yml
 
