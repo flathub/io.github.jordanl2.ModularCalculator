@@ -1,11 +1,14 @@
 app-id: io.github.jordanl2.ModularCalculator
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: '6.6'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '5.15-23.08'
+base-version: '6.6'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
+build-options:
+  env:
+    - BASEAPP_REMOVE_WEBENGINE=1
 command: modularcalculator
 finish-args:
   - --share=ipc
@@ -17,11 +20,13 @@ modules:
 
   - pyyaml.yml
 
+  - scipy.yml
+
   - name: modularcalculator
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.3.1.tar.gz
-        sha256: e0fe7165d01be21b4cd37d72ce195b225f7dacc0b68e1604ef49097884c0e6f4
+        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.4.0.tar.gz
+        sha256: db0a077725712c522d097bd8414136c3e3a54337778edd1969f61a3782337389
     buildsystem: simple
     build-commands:
       - pip3 install --no-deps --no-use-pep517 --prefix=${FLATPAK_DEST} .
@@ -29,8 +34,8 @@ modules:
   - name: modularcalculatorinterface
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.4.5.tar.gz
-        sha256: b8e0145acb8dcdfc633bac3c753fc48bda2a85228dd5ed60cc4b838092a56ac0
+        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.0.tar.gz
+        sha256: 42609150ecbbbce2c06d89f4f8d7e60b19ef72ce7d9a83257893c4ed199237eb
     buildsystem: simple
     build-commands:
       - sed -i -e "s/native/flatpak/" config/ModularCalculator/version.yml
