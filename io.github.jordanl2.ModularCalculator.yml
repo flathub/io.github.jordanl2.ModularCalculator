@@ -35,7 +35,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.0.tar.gz
-        sha256: 42609150ecbbbce2c06d89f4f8d7e60b19ef72ce7d9a83257893c4ed199237eb
+        sha256: ea3cfa316b3b48cf4f18f0e6bc2068b5403eb1b8e9f9ad1ff6c25fd60ad8e8e6
     buildsystem: simple
     build-commands:
       - sed -i -e "s/native/flatpak/" config/ModularCalculator/version.yml
