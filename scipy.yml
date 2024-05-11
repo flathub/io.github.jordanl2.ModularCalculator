@@ -23,13 +23,13 @@ modules:
   - type: file
     only-arches:
       - x86_64
-    url: https://files.pythonhosted.org/packages/d4/b8/7169935f9a2ea9e274ad8c21d6133d492079e6ebc3fc69a915c2375616b0/scipy-1.12.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-    sha256: 8b8066bce124ee5531d12a74b617d9ac0ea59245246410e19bca549656d9a40a
+    url: https://files.pythonhosted.org/packages/e8/fb/e5955e2ddbdf2baee461eb53ec8d0adedd20a6dfc5510ef8d5e7e44ba461/scipy-1.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+    sha256: 9ff7dad5d24a8045d836671e082a490848e8639cabb3dbdacb29f943a678683d
   - type: file
     only-arches:
       - aarch64
-    url: https://files.pythonhosted.org/packages/e3/c5/d40abc1a857c1c6519e1a4e096d6aee86861eddac019fb736b6af8a58d25/scipy-1.12.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
-    sha256: c3003652496f6e7c387b1cf63f4bb720951cfa18907e998ea551e6de51a04467
+    url: https://files.pythonhosted.org/packages/c9/d6/14174fdbc0fcca5d026e0e3686084a5cf9b1b0836504c73999fb8cecbc71/scipy-1.13.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+    sha256: b5acd8e1dbd8dbe38d0004b1497019b2dbbc3d70691e65d69615f8a7292865d7
   buildsystem: simple
   build-commands:
   - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
