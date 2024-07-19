@@ -25,8 +25,8 @@ modules:
   - name: modularcalculator
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.4.2.tar.gz
-        sha256: ff6fc02439f49a83fe4845f8e111f3be71c667bac866aad1a33e03e06391eb63
+        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.4.3.tar.gz
+        sha256: 19905f9583b56b1a003c321e4993629e7daff57858cff36b805033ab773f1dd6
     buildsystem: simple
     build-commands:
       - pip3 install --no-deps --no-use-pep517 --prefix=${FLATPAK_DEST} .
@@ -34,8 +34,8 @@ modules:
   - name: modularcalculatorinterface
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.2.tar.gz
-        sha256: 3d9db585b19e1cd97045d54822d9374242080be01c1f637b0600d7e9a582e16c
+        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.3.tar.gz
+        sha256: d39ddb9cc20982f4749763467b15cde0483f018a5b30a5356211c0845c9b8581
     buildsystem: simple
     build-commands:
       - sed -i -e "s/native/flatpak/" config/ModularCalculator/version.yml
