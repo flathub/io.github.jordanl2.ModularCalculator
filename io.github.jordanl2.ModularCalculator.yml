@@ -1,9 +1,9 @@
 app-id: io.github.jordanl2.ModularCalculator
 runtime: org.kde.Platform
-runtime-version: '6.8'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.8'
+base-version: '6.9'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
