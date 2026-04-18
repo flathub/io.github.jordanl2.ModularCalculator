@@ -1,9 +1,9 @@
 app-id: io.github.jordanl2.ModularCalculator
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.9'
+base-version: '6.10'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
@@ -25,8 +25,8 @@ modules:
   - name: modularcalculator
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.5.0.tar.gz
-        sha256: 27ddf63f0688459a0197373e7f53cf9763860542a8340b75d3fb5aaf262e911a
+        url: https://github.com/JordanL2/ModularCalculator/archive/refs/tags/1.5.1.tar.gz
+        sha256: e51c14bdca18b507c08d01bfb9f285b949a81792f978ced8a74336d8e4eb7dc4
     buildsystem: simple
     build-commands:
       - pip3 install --no-deps --no-build-isolation --no-index --find-links . --prefix=${FLATPAK_DEST} .
@@ -34,8 +34,8 @@ modules:
   - name: modularcalculatorinterface
     sources:
       - type: archive
-        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.7.tar.gz
-        sha256: d5131248cf4e3fa591c7f0f936533e7a434f075e31c43daec0ab788898d7c766
+        url: https://github.com/JordanL2/ModularCalculatorInterface/archive/refs/tags/1.5.8.tar.gz
+        sha256: 0466f8255023ef68d6a7b92661f9f614f06f710fe09e7361431d84ce60d99e03
       - type: file
         path: modular_calculator_install.sh
     buildsystem: simple
